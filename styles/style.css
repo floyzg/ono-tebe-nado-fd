@@ -39,20 +39,23 @@
 }
 
 /* Контакты в шапке */
-.contacts__header {
+.contacts {
   display: flex;
   flex-direction: column;
-  max-width: 240px;
   font-size: 18px;
   font-style: normal;
   text-align: left;
+}
+
+.contacts__header {
+  max-width: 240px;
 }
 
 .contacts__header a {
   color: #000;
 }
 
-.addr__header {
+.no-underline {
   text-decoration: none;
 }
 
@@ -104,17 +107,17 @@
 }
 
 /* Выравнивание слов заголовка по сторонам */
-.hero__title span:nth-child(1) {
+.hero__title-start {
   text-align: start;
 }
 
-.hero__title span:nth-child(2) {
+.hero__title-center {
   padding-bottom: 0;
   letter-spacing: 0.3em;
   text-align: center;
 }
 
-.hero__title span:nth-child(3) {
+.hero__title-end {
   letter-spacing: 0.3em;
   text-align: end;
 }
@@ -195,22 +198,22 @@
   width: 334px;
   min-height: 596px;
   padding: 48px 40px;
+  overflow: hidden;
   color: white;
   background-position: center;
   background-size: cover;
 }
 
 /* Затемнение карточки */
-.lot__item::before {
-  content: "";
+.lot__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
 }
 
-/* Поверх затемнения */
-.lot__item * {
+/* Контент над затемнением */
+.lot__item > *:not(.lot__overlay) {
   position: relative;
   z-index: 2;
 }
@@ -237,15 +240,15 @@
 }
 
 /* Фон для карточек */
-.lot__item:nth-child(1) {
+.lot__item--first {
   background-image: url("../images/card-lot-01.jpg");
 }
 
-.lot__item:nth-child(2) {
+.lot__item--second {
   background-image: url("../images/card-lot-02.jpg");
 }
 
-.lot__item:nth-child(3) {
+.lot__item--third {
   background-image: url("../images/card-lot-03.jpg");
 }
 
@@ -324,14 +327,9 @@
 
 /* Контактная информация в футере */
 .contacts__footer {
-  display: flex;
-  flex-direction: column;
   max-width: 264px;
   padding-left: 20px;
-  font-size: 18px;
-  font-style: normal;
   line-height: 135%;
-  text-align: start;
 }
 
 .addr__footer {
