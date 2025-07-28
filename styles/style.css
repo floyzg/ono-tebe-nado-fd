@@ -10,10 +10,10 @@
 .nav__header-list {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 32px;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: circle;
 }
 
 .nav__header-item a {
@@ -21,15 +21,15 @@
   font-size: 18px;
   line-height: 135%;
   text-decoration: underline;
+  list-style: circle;
+}
+
+.nav__header-item.active-item {
+  list-style: none;
 }
 
 .active-item a {
   text-decoration: none;
-}
-
-/* Маркер между пунктами меню */
-.nav__header-marker img {
-  display: block;
 }
 
 /* Логотип в шапке */
@@ -45,7 +45,6 @@
   max-width: 240px;
   font-size: 18px;
   font-style: normal;
-  line-height: 135%;
   text-align: left;
 }
 
