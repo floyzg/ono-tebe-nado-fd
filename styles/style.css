@@ -1,14 +1,16 @@
+/* Шапка */
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 293px;
+  padding: 92px 50px;
 }
 
+/* Меню навигации в шапке */
 .nav__header-list {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -25,14 +27,18 @@
   text-decoration: none;
 }
 
+/* Маркер между пунктами меню */
 .nav__header-marker img {
   display: block;
 }
 
+/* Логотип в шапке */
 .logo__header-image {
   height: 105px;
+  padding-right: 145px;
 }
 
+/* Контакты в шапке */
 .contacts__header {
   display: flex;
   flex-direction: column;
@@ -51,15 +57,14 @@
   text-decoration: none;
 }
 
-/* Main section's */
+/* Hero */
 .hero {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 757px;
-  padding: 0 40px;
+  min-height: 757px;
   overflow: hidden;
   color: white;
   background-image: url("../images/cover.jpg");
@@ -67,6 +72,7 @@
   background-size: cover;
 }
 
+/* Затемнение фона hero-секции */
 .hero::before {
   content: "";
   position: absolute;
@@ -75,36 +81,50 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Заголовок секции hero */
 .hero__title {
   position: relative;
   z-index: 2;
   width: 100%;
-  margin-bottom: auto;
-  padding-top: 160px;
+  padding: 165px 50px 0;
   font-weight: 700;
   font-size: 100px;
   line-height: 115%;
-  letter-spacing: 0.3em;
-  text-align: center;
+  letter-spacing: 30px;
   text-transform: uppercase;
 }
 
 .hero__title span {
   display: block;
+  padding-bottom: 20px;
 }
 
+.hero__title span span.no-letter-spacing {
+  display: inline-block;
+  letter-spacing: 0;
+}
+
+/* Выравнивание слов заголовка по сторонам */
 .hero__title span:nth-child(1) {
-  text-align: left;
+  text-align: start;
 }
 
 .hero__title span:nth-child(2) {
-  text-align: center;
+  padding-bottom: 0;
+  letter-spacing: 0.3em;
+  text-align: center; 
 }
 
 .hero__title span:nth-child(3) {
-  text-align: right;
+  letter-spacing: 0.3em;
+  text-align: end;
 }
 
+.no-letter-spacing{
+  letter-spacing: 0;
+}
+
+/* Контент под заголовком hero */
 .hero__content {
   position: relative;
   z-index: 2;
@@ -113,24 +133,25 @@
   align-items: center;
   gap: 40px;
   width: 100%;
-  max-width: 1080px;
-  margin-top: auto;
-  padding-bottom: 60px;
+  padding: 50px 50px;
 }
 
+/* Текст под заголовком */
 .text-hero {
-  margin: 0;
   font-weight: 400;
   font-size: 22px;
-  letter-spacing: 3px;
+  line-height: 127%;
   text-transform: uppercase;
+  word-spacing: 0.8em;
   white-space: nowrap;
 }
 
+/* Кнопка "Сделать ставку" */
 .btn-hero {
   border: 1px solid white;
-  padding: 14px 28px;
+  padding: 12px 32px;
   color: white;
+  font-weight: 500;
   font-size: 22px;
   text-transform: uppercase;
   background: transparent;
@@ -144,7 +165,7 @@
   background-color: white;
 }
 
-/* lots */
+/* Лоты */
 .lots {
   margin-bottom: 120px;
   padding: 60px 40px;
@@ -159,25 +180,28 @@
   text-transform: uppercase;
 }
 
+/* Сетка карточек лотов */
 .lots-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
+/* Карточка лота */
 .lot__item {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 334px;
-  height: 596px;
+  min-height: 596px;
   padding: 48px 40px;
   color: white;
   background-position: center;
   background-size: cover;
 }
 
+/* Затемнение карточки */
 .lot__item::before {
   content: "";
   position: absolute;
@@ -186,11 +210,13 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
+/* Поверх затемнения */
 .lot__item * {
   position: relative;
   z-index: 2;
 }
 
+/* Заголовок карточки */
 .title__lots {
   color: #fff;
   font-family: var(--font-family);
@@ -202,6 +228,7 @@
   text-transform: uppercase;
 }
 
+/* Текст карточки */
 .text__lots {
   color: #fff;
   font-family: var(--font-family);
@@ -210,6 +237,7 @@
   line-height: 120%;
 }
 
+/* Фон для карточек */
 .lot__item:nth-child(1) {
   background-image: url("../images/card-lot-01.jpg");
 }
@@ -222,6 +250,7 @@
   background-image: url("../images/card-lot-03.jpg");
 }
 
+/* Ссылка "посмотреть больше" */
 .lots__link {
   display: inline-block;
   margin: 30px 40px;
@@ -230,7 +259,7 @@
   text-decoration: underline;
 }
 
-/* auction */
+/* Аукцион */
 .auction {
   padding: 60px 40px;
 }
@@ -242,6 +271,7 @@
   margin: 0 auto;
 }
 
+/* Обёртка логотипа в виде круга */
 .auction__logo-wrapper {
   display: flex;
   justify-content: center;
@@ -252,14 +282,22 @@
   background-color: #000;
 }
 
+/* Логотип в секции аукциона */
 .auction__logo {
   width: 148px;
   height: 114px;
   object-fit: contain;
 }
 
+/* Текстовый блок */
 .auction__text-block {
-  max-width: 693px;
+  max-width: 665px;
+  line-height: 120%;
+}
+
+.auction__text-second {
+  max-width: 695px;
+  line-height: 120%;
 }
 
 .auction__title {
@@ -273,42 +311,53 @@
 .auction__text {
   margin: 0 0 24px;
   font-size: 20px;
-  line-height: 135%;
+  line-height: 120%;
 }
 
-/* footer */
+/* === Footer (Подвал сайта) === */
 .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 180px;
-  margin-bottom: 80px;
+  min-height: 180px;
+  padding-top: 95px;
+  padding-bottom: 80px;
 }
 
+/* Контактная информация в футере */
 .contacts__footer {
   display: flex;
   flex-direction: column;
   max-width: 264px;
+  padding-left: 20px;
   font-size: 18px;
   font-style: normal;
   line-height: 135%;
+  text-align: start;
 }
 
 .addr__footer {
   text-decoration: none;
 }
 
+/* Навигация в футере */
 .nav__footer ul {
+  text-align: center;
   list-style: none;
 }
 
 .nav__footer-item a {
   font-size: 18px;
+
 }
 
+/* Социальные иконки */
 .social-icons {
   display: flex;
+  align-items: start;
   gap: 48px;
+  padding-right: 80px;
 }
+
 .social-icons img {
   width: 48px;
 }
