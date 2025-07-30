@@ -303,11 +303,6 @@
   max-width: 693px;
 }
 
-.auction__text-second {
-  max-width: 288px;
-  line-height: 120%;
-}
-
 .auction__title {
   margin: 100px 0 100px;
   font-weight: 700;
@@ -322,10 +317,6 @@
   margin: 0 0 24px;
   font-size: 20px;
   line-height: 120%;
-}
-
-.auction__text-second{
-  min-width: 693px;
 }
 
 /* Footer */
