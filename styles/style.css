@@ -72,15 +72,6 @@
   background-size: cover;
 }
 
-/* Затемнение фона hero-секции */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 /* Заголовок секции hero */
 .hero__title {
   position: relative;
@@ -202,22 +193,13 @@
   width: 334px;
   min-height: 596px;
   padding: 48px 40px;
-  overflow: hidden;
   color: white;
   background-position: center;
   background-size: cover;
 }
 
-/* Затемнение карточки */
-.lot__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
-}
-
 /* Контент над затемнением */
-.lot__item > *:not(.lot__overlay) {
+.lot__item > *:not(.overlay) {
   position: relative;
   z-index: 2;
 }
@@ -263,6 +245,13 @@
   color: black;
   font-size: 20px;
   text-decoration: underline;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6); /* Можешь поменять на 0.6, если надо для карточек сильнее */
 }
 
 /* Аукцион */
