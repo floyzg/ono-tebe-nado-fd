@@ -167,7 +167,6 @@
 .lots__title {
   margin: 27px 40px;
   color: #000;
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
@@ -208,7 +207,6 @@
 /* Заголовок карточки */
 .title__lots {
   color: #fff;
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 22px;
   line-height: 120%;
@@ -220,7 +218,6 @@
 /* Текст карточки */
 .text__lots {
   color: #fff;
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
