@@ -25,12 +25,11 @@
   color: #000;
   font-size: 18px;
   line-height: 135%;
-  text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 /* Отключаем подчёркивание только у активной ссылки */
-.nav__header-item.active-item a {
+.active-item a {
   text-decoration: none;
 }
 
