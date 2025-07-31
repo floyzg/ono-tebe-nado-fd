@@ -184,6 +184,7 @@
 .lots ul li a {
   text-decoration: none;
 }
+
 /* Карточка лота */
 .lot__item {
   position: relative;
