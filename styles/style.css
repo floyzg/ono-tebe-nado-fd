@@ -16,20 +16,21 @@
   list-style: circle;
 }
 
+.nav__header-item:first-child {
+  list-style-type: none;
+}
+
+/* Общие стили ссылок */
 .nav__header-item a {
   color: #000;
   font-size: 18px;
   line-height: 135%;
   text-decoration: underline;
   text-underline-offset: 3px;
-  list-style: circle;
 }
 
-.nav__header-item.active-item {
-  list-style: none;
-}
-
-.active-item a {
+/* Отключаем подчёркивание только у активной ссылки */
+.nav__header-item.active-item a {
   text-decoration: none;
 }
 
@@ -50,11 +51,11 @@
   text-underline-offset: 3px;
 }
 
-.contacts__header {
+.header .contacts {
   max-width: 208px;
 }
 
-.contacts__header a {
+.header .contacts a {
   color: #000;
 }
 
@@ -330,16 +331,16 @@
 }
 
 /* Контактная информация в футере */
-.contacts__footer {
+.footer .contacts {
   justify-self: start;
   max-width: 240px;
 }
 
-.contacts__footer a {
+.footer .contacts a {
   display: block;
 }
 
-.contacts__footer a:not(.no-underline) {
+.footer .contacts a:not(.no-underline) {
   display: block;
   text-decoration: underline;
 }
