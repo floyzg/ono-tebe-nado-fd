@@ -21,6 +21,7 @@
   font-size: 18px;
   line-height: 135%;
   text-decoration: underline;
+  text-underline-offset: 3px;
   list-style: circle;
 }
 
@@ -321,30 +322,49 @@
 
 /* Footer */
 .footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: space-between;
-  min-height: 180px;
-  margin: 155px 50px 0;
+  margin: 157px 50px 82px;
 }
 
 /* Контактная информация в футере */
 .contacts__footer {
-  max-width: 264px;
-  line-height: 135%;
+  justify-self: start;
+  max-width: 240px;
 }
 
-.addr__footer {
-  text-decoration: none;
+.contacts__footer a {
+  display: block;
+  text-decoration: underline;
 }
 
 /* Навигация в футере */
-.nav__footer ul {
+.nav__footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+
+.nav__footer-item {
+  justify-self: center;
   list-style: none;
 }
 
 .nav__footer-item a {
+  font-weight: 400;
   font-size: 18px;
+  line-height: 100%;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-underline-position: auto;
+}
+
+.nav__footer-item.active-item a {
+  text-decoration: none;
 }
 
 /* Социальные иконки */
@@ -353,10 +373,14 @@
   gap: 48px;
 }
 
-.social-icons img {
+.social-icons a {
+  display: block;
   width: 48px;
+  height: 48px;
 }
 
-.social-icons img:hover {
-  cursor: pointer;
+.social-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
