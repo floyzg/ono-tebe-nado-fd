@@ -28,11 +28,6 @@
   text-underline-offset: 3px;
 }
 
-/* Отключаем подчёркивание только у активной ссылки */
-.active-item a {
-  text-decoration: none;
-}
-
 /* Логотип в шапке */
 .logo__header-image {
   height: 105px;
@@ -354,6 +349,7 @@
   text-align: center;
 }
 
+
 .nav__footer-item {
   justify-self: center;
   list-style: none;
@@ -363,12 +359,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  text-decoration: underline;
   text-underline-offset: 3px;
-  text-underline-position: auto;
 }
 
-.nav__footer-item.active-item a {
+/* Отключаем подчёркивание только у активной ссылки */
+.active-item {
   text-decoration: none;
 }
 
