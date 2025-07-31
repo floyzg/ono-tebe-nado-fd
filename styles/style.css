@@ -47,6 +47,7 @@
   font-style: normal;
   line-height: 135%;
   text-align: left;
+  text-underline-offset: 3px;
 }
 
 .contacts__header {
@@ -335,6 +336,10 @@
 }
 
 .contacts__footer a {
+  display: block;
+}
+
+.contacts__footer a:not(.no-underline) {
   display: block;
   text-decoration: underline;
 }
